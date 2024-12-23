@@ -1,28 +1,30 @@
 {
-  "name": "@holiday-jp/holiday_jp",
-  "version": "2.4.0",
-  "description": "Japanese holidays",
+  "name": "rakuten_holiday_jp",
+  "version": "1.0.0",
+  "description": "Get holidays in Japan with Rakuten Holiday's added as published",
   "main": "lib/holiday_jp.js",
   "types": "lib/holiday_jp.d.ts",
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "test": "node --test ./test/*.js",
     "generate": "git submodule update; cd holiday_jp/; git fetch origin master; git reset --hard origin/master; cd ../; node scripts/generate.js",
-    "build": "npm run generate; webpack; node scripts/build.js;rm scripts/holiday_jp_webpacked.js;cd ./release/; uglifyjs holiday_jp.js -c -m --source-map -o holiday_jp.min.js"
+    "build": " webpack; node scripts/build.js;rm scripts/holiday_jp_webpacked.js;cd ./release/; uglifyjs holiday_jp.js -c -m --source-map -o holiday_jp.min.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/holiday-jp/holiday_jp-js"
+    "url": "https://github.com/wasd0109/holiday_jp-rakuten-js/"
   },
   "keywords": [
     "holidays"
   ],
-  "author": "Ken'ichiro Oyama",
+  "author": "Ken Cheung",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/holiday-jp/holiday_jp-js/issues"
+    "url": "https://github.com/wasd0109/holiday_jp-rakuten-js/issues"
   },
-  "homepage": "https://github.com/holiday-jp/holiday_jp-js",
+  "homepage": "https://github.com/wasd0109/holiday_jp-rakuten-js/",
   "devDependencies": {
     "@playwright/test": "^1.48.0",
     "js-yaml": "^3.13.1",
