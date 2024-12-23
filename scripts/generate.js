@@ -3,12 +3,12 @@ const fs = require('fs'),
   yaml = require('js-yaml'),
   moment = require('moment');
 
-const writeFile = (file_name, holidays) => {
+const writeFile = (file_name, allHolidays) => {
   const timestamp = moment().format('YYYY-MM-DD HH:mm:ss');
   const jsfile = [util.format('// Generated from holidays.yml at %s;', timestamp)];
   jsfile.push('var holidays = {};');
-
-  for (const date of Object.keys(holidays)) {
+  console.log(rakutenHolidays);
+  for (const date of Object.keys(allHolidays)) {
     jsfile.push(`holidays['${moment(new Date(date)).format('YYYY-MM-DD')}'] = {`);
     jsfile.push(`  'date': '${moment(new Date(date)).format('YYYY-MM-DD')}',`);
     jsfile.push(`  'week': '${holidays[date]['week']}',`);
@@ -22,9 +22,10 @@ const writeFile = (file_name, holidays) => {
 
   fs.writeFileSync(file_name, jsfile.join('\n'));
 };
-
+const rakutenHolidays = yaml.safeLoad(fs.readFileSync(__dirname + '/../rakuten_holidays_detailed.yml', 'utf8'));
 const holidays = yaml.safeLoad(fs.readFileSync(__dirname + '/../holiday_jp/holidays_detailed.yml', 'utf8'));
-writeFile(`${__dirname}/../lib/holidays.js`, holidays);
+const allHolidays = { ...rakutenHolidays, ...holidays };
+writeFile(`${__dirname}/../lib/holidays.js`, allHolidays);
 
 const holidays_every_year = Object.keys(holidays).reduce((holidays_every_year, date) => {
   const year = moment(new Date(date)).format('YYYY');

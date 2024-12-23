@@ -9,8 +9,8 @@
   ],
   "scripts": {
     "test": "node --test ./test/*.js",
-    "generate": "git submodule update; cd holiday_jp/; git fetch origin master; git reset --hard origin/master; cd ../; node scripts/generate.js",
-    "build": " webpack; node scripts/build.js;rm scripts/holiday_jp_webpacked.js;cd ./release/; uglifyjs holiday_jp.js -c -m --source-map -o holiday_jp.min.js"
+    "generate": "git submodule update; cd holiday_jp/; git fetch origin master;  cd ../; node scripts/generate.js",
+    "build": "npm run generate; webpack; node scripts/build.js;rm scripts/rakuten_holiday_jp_webpacked.js;cd ./release/; uglifyjs rakuten_holiday_jp.js -c -m --source-map -o rakuten_holiday_jp.min.js"
   },
   "repository": {
     "type": "git",
