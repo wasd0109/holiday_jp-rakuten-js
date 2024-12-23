@@ -1,6 +1,13 @@
-# holiday_jp JavaScript [![test](https://github.com/holiday-jp/holiday_jp-js/workflows/test/badge.svg)](https://github.com/holiday-jp/holiday_jp-js/actions)
+# holiday_jp JavaScript fork with Rakuten Holiday [![test](https://github.com/holiday-jp/holiday_jp-js/workflows/test/badge.svg)](https://github.com/holiday-jp/holiday_jp-js/actions)
 
-Get holidays in Japan.
+Get holidays in Japan with Rakuten Holiday's added as published
+
+This fork is a modified, renamed and redistributed version of [holiday_jp-js](https://github.com/holiday-jp/holiday_jp-js) based on the MIT license and enforce the license's rule as of following
+
+1. Inclusion of the original copyright notice
+2. Acknowledgment of the original author
+3. Statement of No warranty
+
 
 ## Install
 
