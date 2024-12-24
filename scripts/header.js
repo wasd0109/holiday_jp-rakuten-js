@@ -1,3 +1,3 @@
 (function() {
-  var holiday_jp =
+  var rakuten_holiday_jp =
         
