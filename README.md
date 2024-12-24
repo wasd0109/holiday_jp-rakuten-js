@@ -10,6 +10,7 @@ Currently include only 2023-2025 holidays, please create pull request for the ra
 2. Acknowledgment of the original author
 3. Statement of No warranty
 
+Tests are currently WIP
 
 ## Install
 
