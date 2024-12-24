@@ -4,6 +4,8 @@ Get holidays in Japan with Rakuten Holiday's added as published
 
 This fork is a modified, renamed and redistributed version of [holiday_jp-js](https://github.com/holiday-jp/holiday_jp-js) based on the MIT license and enforce the license's rule as of following
 
+Currently include only 2023-2025 holidays, please create pull request for the rakuten_holidays_detailed.yml and this readme file to extend support before 2023.
+
 1. Inclusion of the original copyright notice
 2. Acknowledgment of the original author
 3. Statement of No warranty
